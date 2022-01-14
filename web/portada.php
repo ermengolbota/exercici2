@@ -19,8 +19,9 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 </head>
 <body>
     <main>
+       <h1>Els llibres de l'<img src="http://ebota.alumnes.inspedralbes.cat/img/logo.png" width="100px" title="logo" alt="logo IP" ></h1>
+
          <article>
-            <h1>Els llibres de l'<img src="http://ebota.alumnes.inspedralbes.cat/img/logo.png" width="100px" title="logo" alt="logo IP" ></h1>
 
 <?php
  require_once("db/db.php");
