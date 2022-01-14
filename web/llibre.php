@@ -15,15 +15,19 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
-    <title>Un recull de llibres</title>
+    <title>Un llibre concret</title>
 </head>
 <body>
     <main>
          <article>
-            <h1>Els llibres de l'<img src="http://ebota.alumnes.inspedralbes.cat/img/logo.png" width="100px" title="logo" alt="logo IP" ></h1>
-
+            <h1>Detalls del llibre</h1>
 <?php
- require_once("db/db.php");
+    $idBook=$_GET["id"];
+    $DBhost = "labs.inspedralbes.cat";
+    $DBuser = "ebota_unUsuari";
+    $DBpass = "1GranPassword";
+    $DBname = "ebota_algunesDades";
+
  try{
   $DBcon = new PDO("mysql:host=$DBhost;dbname=$DBname",$DBuser,$DBpass);
   $DBcon->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -31,35 +35,29 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
   die($ex->getMessage());
  }
 
- $query = "SELECT * FROM BOOK";
- 
+ $query = "SELECT * FROM BOOK WHERE id=".$idBook;
  $stmt = $DBcon->prepare($query);
  $stmt->execute();
  
- $userData = array();
  
  while($row=$stmt->fetch(PDO::FETCH_ASSOC))
   {  
-  ?>
-  <a href="./llibre.php?id=<?php echo $row[id]; ?>" title="Dades del llibre">
-<section>
-    <header><?php echo $row[title];  ?></header>
-    <figure>
-        <img src="<?php echo $row[cover]; ?>" ">
-        <figcaption><?php echo $row[author]; ?></figcaption>
-    </figure>
-    <p class="intro">
+
+?>
+    <header>
+        <?php echo $row[title]; ?>
+    </header>
+    <p>
         <?php echo $row[summary]; ?>
-    </p>
-</section>
-  </a>
-  <?php
+  </p>
+ <?php
     }
  
 ?>
-
+        
 </article>
 </main>
+<a href="./index.php" title="Inici">Inici</a>
 </body>
 
 </html>
