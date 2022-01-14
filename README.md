@@ -1,15 +1,17 @@
-# transversals
-Esquema mínim de carpetes pels projectes transversals
+# Deseplegament
+Desplegueu aquesta aplicació a l'arrel del vostre nou domini
 
-És obligatori seguir aquesta estructura tot i que la podeu ampliar.
+elVostreIdPedralbes2.alumnes.inspedralbes.cat/
 
-## Atenció
-Un cop comenceu heu de canviar aquesta explicació amb la corresponent al vostre projecte (utilitzant markdown)
+Per exemple:
+
+a22NomCogCog2.alumnes.inspedralbes.cat
+
+## Detalls
+* Heu de crear-vos la vostra pròpia BD, però amb les dades que inclou el projecte, i fer els canvis pertinents pq. s'hi connecti.
+* L'aplicació ha de funcionar, tota. Enllaços i totes les imatges (inclós el logo). Si cal canvieu el codi original... podria estar malament.
+* L'aplicació s'ha de mostrar a l'adreça indicada. Podeu afegir fitxers o una mica de codi, però per aconseguir-ho no podeu modificar el codi
+* La BD conté un registre que heu de canviar i posar-hi el vostre nom.
 
 
-# Aquest fitxer ha de contenir com a mínim:
- * Nom dels integrants
- * Nom del projecte
- * Petita descripció
- * URL de producció (quan la tingueu)
- * Estat: (explicació de en quin punt està)
+Un cop n'estigueu completament convençuts feu el lliurament del que se us demana al moodle, 
