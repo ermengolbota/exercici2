@@ -57,7 +57,7 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
         
 </article>
 </main>
-<a href="./index.php" title="Inici">Inici</a>
+<a href="./" title="Inici">Inici</a>
 </body>
 
 </html>
